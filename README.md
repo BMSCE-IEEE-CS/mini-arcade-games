@@ -1,69 +1,81 @@
-# Mini Games Arcade - Contribution Sprint
+# Reaction Racer
 
-Welcome to the **Mini Games Arcade Sprint**!
+Reaction Racer is a fast and minimal browser-based reaction time game built using plain HTML, CSS, and JavaScript.  
+The goal is simple: wait for the box to turn green and click as fast as possible. Your best times, averages, and false starts are tracked automatically.
 
-In this challenge, your task is simple:
+---
 
-### Fork this repo and build ANY mini game you want.
+## Features
 
-> Use plain **HTML, CSS, JavaScript** (or any lightweight frontend tech). This repository contains no starter code - the entire game is up to you.
+- Pure HTML, CSS, and JavaScript (no frameworks)
+- Randomized wait timers for unpredictability
+- Clean UI with clear round indicators
+- False Start detection with red flash animation
+- LocalStorage high score tracking
+- Adjustable rounds (1, 3, 5, 10)
+- Keyboard support (Space / Enter)
+- Works on desktop and mobile
 
-## What You Need To Do
+---
 
-1. **Fork** this repository
-2. **Clone** it to your system
-3. Inside the repo, create a folder for your game: `/your-game-name/`
-4. Build your game inside that folder using any structure you prefer
-5. Once you finish:
+## How to Play
 
-- If your game is **deployable**, upload it (GitHub Pages / Netlify / Vercel)
-  <br>
-  **Add the deployment link in your repository’s README**
-- If not deployable (local-only game):
-  <br>
-  **Add screenshots or a GIF preview in your repository**
+1. Click the main box to begin a round.
+2. Wait for the box to turn green.
+3. As soon as it turns green and says "CLICK!", click the box.
+4. Your reaction time is recorded each round.
+5. If you click too early, it counts as a False Start.
+6. Complete all rounds to see your stats and play again.
 
-6. Submit the repository on the website.
+---
 
-## What Kind of Games Can You Build?
+## Game Stats Displayed
 
-Anything small and playable! Examples:
+- Current Round
+- Total Rounds
+- Last Reaction Time
+- Best Reaction Time (per session)
+- Average Reaction Time
+- High Score (your best-ever time, stored in localStorage)
 
-- Snake
-- Pong
-- Flappy Bird clone
-- Memory card flip
-- Reaction timer
-- Typing speed test
-- Whack-a-mole
-- Simple platformer
-- Maze/Pathfinding game
-- Number guessing
-- Logic puzzles
-- Physics-based mini toys
-- ANY creative browser game you imagine!
+---
 
-## Requirements
+## False Start Animation
 
-- No heavy frameworks (React/Angular/etc)
-- Keep assets light
-- Include a **README in your own fork** with:
-  - Game name
-  - Short description
-  - Screenshot/GIF OR deployment link
+If the player clicks before the green signal:
+- The box flashes red three times
+- The round does not advance
+- A warning message appears
 
-## Goals of This Sprint
+This improves feedback and game feel while preventing accidental clicks from counting as rounds.
 
-This sprint tests your ability to:
+---
 
-- Think creatively
-- Implement logic in JavaScript
-- Design small interactive experiences
-- Organize a simple project
-- Show UI/UX and front-end skills
+## High Score Storage
 
-## Have Fun
+The game saves your best reaction time in the browser using `localStorage`.
 
-Make something fun, weird, cool, or chaotic.  
-Surprise us. Break the rules of normal.  
-Just **make a mini game that works**.
+- High Score updates only on valid rounds
+- Penalties and false starts do not affect the high score
+- Clearing site data resets it
+
+---
+
+## Folder Structure
+
+reaction-racer/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
+### Netlify / Vercel
+
+
+
+---
+
+## Screenshot / Preview
+![alt text](image.png)
+![alt text](image-1.png)
